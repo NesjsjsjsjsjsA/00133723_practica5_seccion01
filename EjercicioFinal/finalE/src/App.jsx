@@ -23,9 +23,9 @@ function App() {
 
   function Data(props) {
     return <div className='dataClear'>
-      <ul><li><b>Profesión: </b>{props.profesion}</li></ul>
-      <ul><li><b>premios:</b>{props.premios}</li></ul>
-      <ul><li><b>Descubrio: </b>{props.descubrio}</li></ul>
+      <ul><li className='Li'><b>Profesión: </b>{props.profesion}</li></ul>
+      <ul><li className='Li'><b>premios:</b>{props.premios}</li></ul>
+      <ul><li className='Li'><b>Descubrio: </b>{props.descubrio}</li></ul>
     </div>;
   }
 
@@ -46,14 +46,23 @@ function App() {
           premios={"4(Premio Nobel de Fisica, Premio Nobel de Quimica, Medalla Davy, Medalla Matteucci)"}
           descubrio={"polonio(elemento quimico)"}
         />
+      </div>
+
+
+    )
+  }
+
+  function Profile2() {
+    return (
+      <div className='BGT'>
         <Title nombre={"Katsuko Saruhashi"} />
 
         <Avatar
           size={80}
           person={{
             name: 'Katsu',
-            perslink: 'https://upload.wikimedia.org',
-            imageId: '/wikipedia/commons/2/2b/Josei-Kyoyo-1965-March-1',
+            perslink: 'https://upload.wikimedia.org/',
+            imageId: 'wikipedia/commons/2/2b/Josei-Kyoyo-1965-March-1',
           }}
         />
         <Data
@@ -70,8 +79,12 @@ function App() {
 
   return (
     <>
-      <h1>Cientificos Notables</h1>
-      <Profile/>
+      <div className='X'>
+        <h1>Cientificos Notables</h1>
+        <Profile />
+        <p></p>
+        <Profile2 />
+      </div>
     </>
   )
 }
